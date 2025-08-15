@@ -7,6 +7,7 @@ use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\OrganizationsController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Pageacceuilcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,12 @@ use Illuminate\Support\Facades\Route;
 
 // Auth
 
+  
+Route::get('/', [Pageacceuilcontroller::class, 'jjj'])
+    ->name('home') 
+     ->middleware('auth');
+
+
 Route::get('login', [AuthenticatedSessionController::class, 'create'])
     ->name('login')
     ->middleware('guest');
@@ -35,7 +42,7 @@ Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
 
 // Dashboard
 
-Route::get('/', [DashboardController::class, 'index'])
+Route::get('/test', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth');
 
