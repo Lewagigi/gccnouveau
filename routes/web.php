@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [Pageacceuilcontroller::class, 'jjj'])
+Route::get('test', [Pageacceuilcontroller::class, 'jjj'])
     ->name('home') 
     ;
 // Auth
