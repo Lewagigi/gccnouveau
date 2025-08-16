@@ -3,7 +3,7 @@
   <div class="flex items-center justify-center p-6 min-h-screen bg-indigo-300">
     <div class="w-full max-w-md">
 
-
+        Bienvenue au Gci tech
       
       
       <form class="mt-8 bg-white rounded-lg shadow-xl overflow-hidden" @submit.prevent="login">

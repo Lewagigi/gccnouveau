@@ -23,12 +23,6 @@ use Illuminate\Support\Facades\Route;
 
 // Auth
 
-  
-Route::get('/', [Pageacceuilcontroller::class, 'jjj'])
-    ->name('home') 
-     ->middleware('auth');
-
-
 Route::get('login', [AuthenticatedSessionController::class, 'create'])
     ->name('login')
     ->middleware('guest');
@@ -42,7 +36,7 @@ Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
 
 // Dashboard
 
-Route::get('/test', [DashboardController::class, 'index'])
+Route::get('/', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth');
 
