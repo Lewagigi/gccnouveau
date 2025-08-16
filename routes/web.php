@@ -21,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/', [Pageacceuilcontroller::class, 'jjj'])
+    ->name('home') 
+    ;
 // Auth
 
 Route::get('login', [AuthenticatedSessionController::class, 'create'])
